@@ -3,7 +3,7 @@ import glob
 import mmap
 import pykd
 
-# The goal of this program is to edit the dimensions on an image within its header.
+# Des:  The goal of this program is to edit the dimensions on an image within its header.
 # The height and width will be edited iteratively ranging from 0x0000 - 0xFFFF
 # This is done to crash an image processing program that parses this image. 
 # After a program crash, a dump file is created.The dump file is then analyzed and 
@@ -14,10 +14,12 @@ import pykd
 #       locations within the image header. You might need to edit these 
 #       manually to accomplish your goal. Another hardcoded piece of 
 #       data you will have to edit is the executable that will be processing your image.
+
+# Env:  Windows
 if __name__ == '__main__':
 
     # Retrieve information from the user
-    folder_path = input('Enter folder containing dump files: ') # C:\\Users\\User\\Desktop\\dumps\\*
+    folder_path = input('Enter folder containing dump files: ') # C:\Users\User\Desktop\dumps\*
     image_name = input('Enter image we will be modifying: ') # image.jpg
     step_size = input('Enter the image dimension step size (min 1): ') # 100
 
